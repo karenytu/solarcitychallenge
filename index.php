@@ -36,7 +36,6 @@
 	// 	echo 'Hello World 2';
 	// 	echo "Success! You entered: ".$_POST['name'];//.$input;
 	// }
-	$client = new MongoDB\Client("mongodb://heroku_5kdpcthd:rggk6pekbv8ttf1f7g6ju7jp5u@ds121190.mlab.com:21190/heroku_5kdpcthd");
 	
 	try {
 	    $connection = new Mongo($URI);
