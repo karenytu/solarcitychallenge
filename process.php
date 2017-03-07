@@ -8,7 +8,8 @@
  <?php
 	$resource =  pg_connect(getenv('DATABASE_URL'));
 	echo 'test';
-	echo pg_name(resource);
+	$dbname = 
+	echo pg_dbname(resource);
 	echo 'test 2';
 	$numrows = pg_num_rows(resource, "select * from users"); //users is the name of a table
 	// $required = array('name'); implement later...https://stackoverflow.com/questions/3190464/php-check-if-any-posted-vars-are-empty-form-all-fields-required
