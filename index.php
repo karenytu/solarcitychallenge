@@ -39,8 +39,8 @@
 	echo 'Hello World 2';
 
 	try {
-		echo 'Hello World 3';
 	    $connection = new Mongo($URI);
+	    echo 'Hello World 3';
 	    $database   = $connection->selectDB('heroku_5kdpcthd');
 	    $collection = $database->selectCollection('Users');
 	} catch(MongoConnectionException $e) {
