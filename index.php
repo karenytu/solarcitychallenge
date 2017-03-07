@@ -3,7 +3,7 @@
 	<body>
 
 	<form action = "process.php", method="post"> <!-- Write css layout for a form!!!-- >
-		<label>Username </label><input type="text" name="username"/>
+		Username <input type="text" name="username"/>
 		<br>
 		<label>Password </label><input type="text" name="password"/>
 		<br>
