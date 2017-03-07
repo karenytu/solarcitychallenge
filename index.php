@@ -1,5 +1,12 @@
-<?php
- echo 'Hello World';
+<?php  
+	require 'vendor/autoload.php';
+	$uri = "mongodb://<dbuser>:<dbpassword>@ds121190.mlab.com:21190/heroku_5kdpcthd";
+	$client = new MongoDB\Client($uri);
+
+	if(isset($_POST['submit'])){ //check if form was submitted
+		$input = $_POST['inputText']; //get input text
+		echo "Success! You entered: ".$input;
+	}
  ?>
 
 <>
