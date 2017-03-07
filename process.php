@@ -34,7 +34,7 @@
 			if empty($_POST["address2"]) {
 				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
 			} else {
-				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["address2"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);			}
+				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["address2"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
 			}
 			echo $serializedaddress;
 
