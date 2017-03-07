@@ -2,7 +2,7 @@
 <html>
 	<body>
 
-	<form action = "#", method="post">
+	<form action = "", method="post">
 		<label>Name <label><input type="text" name="name">
 		<br>
 		<br>
@@ -31,7 +31,7 @@
 	$resource =  pg_connect(getenv('DATABASE_URL'));
 	echo 'Test 2';
 
-	if(!empty($POST)) {
+	if(empty($POST)) {
 		echo 'empty';
 	} else {
 		echo 'filled';
