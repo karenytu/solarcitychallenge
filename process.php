@@ -10,9 +10,9 @@
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
 	$table = pg_query($resource, "select * from users;");
 
-	$var_dump($POST["age"]);
+	//$var_dump($_POST["age"]);
 
-	if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($POST["age"]) && !empty($_POST["name"]) && !empty($_POST["address1"]) &&
+	if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["age"]) && !empty($_POST["name"]) && !empty($_POST["address1"]) &&
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
 		!empty($_POST["interest"])) {
 
@@ -46,7 +46,7 @@
 
 			//put all information into a string, then send to database
 			// $rowtoinsert = "'";
-			$rowtoinsert = "'".$_POST["username"]."','".$_POST["password"]."','".$_POST["name"]."',".gettype($POST_["age"]).",'".$serializedaddress."','".$_POST['interest']."'";
+			$rowtoinsert = "'".$_POST["username"]."','".$_POST["password"]."','".$_POST["name"]."',".gettype($_POST["age"]).",'".$serializedaddress."','".$_POST['interest']."'";
 			echo $rowtoinsert;
 			// $attempt = pg_query($resource, "insert into users values (".$rowtoinsert. ");");
 			// if($attempt != null) {
