@@ -7,10 +7,13 @@
 
  <?php
 	$resource =  pg_connect(getenv('DATABASE_URL'));
-	echo $_POST["name"];
-	if(empty($POST)) {
-		echo 'empty';
-	} else {
-		echo 'filled';
-	}
+	echo pg_name(resource);
+	$numrows = pg_num_rows(resource, "select * from users"); //users is the name of a table
+	// $required = array('name'); implement later...https://stackoverflow.com/questions/3190464/php-check-if-any-posted-vars-are-empty-form-all-fields-required
+	// echo $_POST["name"];
+	// if(empty($POST)) {
+	// 	echo 'empty';
+	// } else {
+	// 	echo 'filled';
+	// }
 ?>
