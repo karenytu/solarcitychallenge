@@ -2,7 +2,7 @@
 <html>
 	<body>
 
-	<form action="process.php", method="post">  <!--action should be to send data to mysql database-->
+	<form action="process.php", method="post">
 		<label>Name <label><input type="text" name="name">
 		<br>
 		<br>
