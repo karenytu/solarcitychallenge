@@ -12,7 +12,7 @@
 
 	echo 'table exists!!!!!';
 	//insert a row..
-	$insertrow = pg_query($resource, "insert into users values('un2', 'pw2', 'name2', '2', 'address2', 'interest2');");
+	$insertrow = pg_query($resource, "insert into users values('un3', 'pw3', 'name3', '3', 'address3', 'interest3');");
 	if($insertrow) {
 		echo 'information entered successfully!';
 	}
