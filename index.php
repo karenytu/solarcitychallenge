@@ -36,14 +36,15 @@
 	// 	echo 'Hello World 2';
 	// 	echo "Success! You entered: ".$_POST['name'];//.$input;
 	// }
-	
+	echo 'Hello World 2';
+
 	try {
 	    $connection = new Mongo($URI);
 	    $database   = $connection->selectDB('heroku_5kdpcthd');
 	    $collection = $database->selectCollection('Users');
-	    echo 'Hello World 2';
-	} catch(MongoConnectionException $e)
-	{
-	    die("Failed to connect to database ".$e->getMessage());
+	    echo 'Hello World 3';
+	} catch(MongoConnectionException $e) {
+		echo 'Hello World 4';
+	    die('Failed to connect to database '.$e->getMessage());
 	}
  ?>
