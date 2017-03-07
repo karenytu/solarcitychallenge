@@ -2,7 +2,7 @@
 <html>
 	<body>
 
-	<form action = "process.php" method="post"> <!-- Write css layout for a form!!!-- >
+	<form action = "process.php" method="post"> 
 		<br>
 		<label>Username </label<input type="text" name="username"/>
 		<br>
