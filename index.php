@@ -31,7 +31,7 @@
 	$uri = "mongodb://heroku_5kdpcthd:rggk6pekbv8ttf1f7g6ju7jp5u@ds121190.mlab.com:21190/heroku_5kdpcthd";
 	// $uri = getenv('MONGODB_URI');
 	echo 'Hello World 1';
-	$client = new MongoDB\Client($uri);
+	$client = new MongoDB\Client("mongodb://heroku_5kdpcthd:rggk6pekbv8ttf1f7g6ju7jp5u@ds121190.mlab.com:21190/heroku_5kdpcthd");
 
 	echo 'Hello World';
 	if(!empty($_POST)){ //check if form was submitted
