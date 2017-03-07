@@ -39,11 +39,11 @@
 			} else {
 				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["address2"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
 			}
-			echo n12br($serializedaddress);
+			//echo $serializedaddress;
 
 			//put all information into a string, then send to database
-			//$rowtoinsert = "\'".$_POST["username"]."\','".$_POST["password"]."\','".$_POST["name"]."\','".$address."\','"$_POST['interest']."\'";
-			//echo $rowtoinsert;
+			$rowtoinsert = "\'".$_POST["username"]."\','".$_POST["password"]."\','".$_POST["name"]."\','".$address."\','"$_POST['interest']."\'";
+			echo $rowtoinsert;
 			//pg_query($resource, "insert into users values (".$rowtoinsert. ");");
 		}
 	} else {
