@@ -15,7 +15,7 @@
 		echo 'table does not exist';
 		pg_query($resource, "CREATE TABLE users(NAME TEXT);");
 	} else{
-		echo 'table exists!!!!!'
+		echo 'table exists!!!!!';
 	}
 	echo 'test 3';
 	// $result2 = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
