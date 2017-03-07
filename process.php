@@ -8,9 +8,17 @@
  <?php
 	$resource =  pg_connect(getenv('DATABASE_URL'));
 	echo 'test';
-	echo pg_dbname();
+	// echo pg_dbname(); //definitely returned some random string!
 	echo 'test 2';
-	$numrows = pg_num_rows(resource, "select * from users"); //users is the name of a table
+	echo pg_query($resource, 'IF OBJECT_ID(\'users\') IS NULL');
+	// if(pg_query($resource, 'IF OBJECT_ID(\'users\') IS NULL') {
+	// 	pg_query($resource, 'CREATE TABLE users(NAME TEXT)');
+	// 	echo 'table created';
+	// } else {
+	// 	echo 'table already exists';
+	// }
+	// pg_copy_from($resource, 'users', $rows);
+	// $numrows = pg_num_rows(resource, "select * from users"); //users is the name of a table
 	// $required = array('name'); implement later...https://stackoverflow.com/questions/3190464/php-check-if-any-posted-vars-are-empty-form-all-fields-required
 	// echo $_POST["name"];
 	// if(empty($POST)) {
