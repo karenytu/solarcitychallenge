@@ -9,6 +9,8 @@
 		<br>
 		<label>Name </label><input type="text" name="name"/>
 		<br>
+		<label>Age </label><input type="text" name="age"/>
+		<br>
 		<br>
 		<label>Address Line 1 </label><input type="text" name="address1"/> <!-- Street address, P.O. box, company name, c/o,   <div class="submissionfield"-->
 		<br>
