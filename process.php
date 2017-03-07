@@ -33,6 +33,7 @@
 			</html>";
 			//insert the information into the database!
 			
+			$serializedaddress = '';
 			// for the different fields of an address, concatenate into a single string
 			if (empty($_POST["address2"])) {
 				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
