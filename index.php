@@ -30,5 +30,11 @@
 	echo 'Test 1';
 	$resource =  pg_connect(getenv('DATABASE_URL'));
 	echo 'Test 2';
+
+	if(!empty($POST)) {
+		echo 'empty';
+	} else {
+		echo 'filled';
+	}
 	
  ?>
