@@ -16,9 +16,15 @@
 	echo 4;
 	if (!$result) {
 		echo 'table does not exist';
-		$ resource pg_query($resource, "CREATE TABLE users(NAME TEXT);"); // goes here, but does not succesfully make a table
+		$tablecreated = pg_query($resource, "CREATE TABLE users(NAME TEXT);"); // goes here, but does not succesfully make a table
+		echo $tablecreated ? 'true' : 'false';
 	} else{
 		echo 'table exists!!!!!';
+	}
+
+	$result2 = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
+	if (!result) {
+		echo 'table NOT created';
 	}
 	echo 'test 3';
 	// $result2 = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
