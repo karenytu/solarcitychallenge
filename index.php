@@ -2,7 +2,11 @@
 <html>
 	<body>
 
-	<form action = "process.php", method="post">
+	<form action = "process.php", method="post"> <!-- Write css layout for a form!!!-- >
+		<label>Username <label><input type="text" name="username">
+		<br>
+		<label>Password <label><input type="text" name="password">
+		<br>
 		<label>Name <label><input type="text" name="name">
 		<br>
 		<br>
@@ -26,15 +30,7 @@
 	</body>
 </html>
 
-<?php  
-	echo 'Test 1';
+<!--?php  
 	$resource =  pg_connect(getenv('DATABASE_URL'));
-	echo 'Test 2';
-
-	if(empty($POST)) {
-		echo 'empty';
-	} else {
-		echo 'filled';
-	}
-	
- ?>
+	REMOVED ANGLE BRACKETS..this section of code is probably not needed
+ ? -->
