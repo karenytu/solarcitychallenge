@@ -16,12 +16,23 @@
 	// echo 4;
 	if ($result) {
 		echo 'table does not exist';
-		$tablecreated = pg_query($resource, "CREATE TABLE users(NAME TEXT);"); // goes here, but does not succesfully make a table?
-		echo $tablecreated ? 'true' : 'false';
+		$tablecreated = pg_query($resource, "CREATE TABLE users(NAME TEXT);");
 	} else{
 		echo 'table exists!!!!!';
+		$numrows = pg_quert($resource, "SELECT COUNT(*) FROM users;");
+		echo $numrows;
+		//insert a row..
 		// number of rows in table???
 	}
+
+	// $table = pg_query($resource, "SELECT * from users;");
+	// for($ri = 0; $ri < $numrows; $ri++) {
+ //    	echo "<tr>\n";
+ //    	$row = pg_fetch_array($result, $ri);
+ //    	echo $row["NAME"];
+ //    			// <td>", $row["lname"], "</td>
+ //   				// <td>", $row["id"], "</td></tr>";
+ //   }
 
 	$result2 = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
 	if ($result2) {
