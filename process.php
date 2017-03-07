@@ -17,6 +17,7 @@
 		if (!pg_query("if exists (select name from users where username = \'".$POST["username"]."\') then null")) { //username already exists
 			//"select name from users where username = \'".$POST["username"]."\'"
 			//"if exists (select name from users where username = \'".$POST["username"]."\') then null"
+			var_dump(pg_query("if exists (select name from users where username = \'".$POST["username"]."\') then null"));
 			echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
 			echo "<html>
 				<body>
