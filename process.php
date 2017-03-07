@@ -19,7 +19,7 @@
 		$tablecreated = pg_query($resource, "CREATE TABLE users(NAME TEXT);");
 	} else{
 		echo 'table exists!!!!!';
-		$numrows = pg_quert($resource, "SELECT COUNT(*) FROM users;");
+		$numrows = pg_query($resource, "SELECT COUNT(*) FROM users;");
 		echo $numrows;
 		//insert a row..
 		// number of rows in table???
