@@ -29,7 +29,7 @@
 <?php  
 	require 'vendor/autoload.php';
 	$uri = "mongodb://<dbuser>:<dbpassword>@ds121190.mlab.com:21190/heroku_5kdpcthd";
-	$client = new MongoDB\Client($uri);
+	$client = new MongoClient($uri);
 
 	echo 'Hello World';
 	if(!empty($_POST)){ //check if form was submitted
