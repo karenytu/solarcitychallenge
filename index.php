@@ -2,7 +2,7 @@
 <html>
 	<body>
 
-	<form action = "", method="post">
+	<form action = "process.php", method="post">
 		<label>Name <label><input type="text" name="name">
 		<br>
 		<br>
