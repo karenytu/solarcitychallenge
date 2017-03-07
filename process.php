@@ -12,7 +12,8 @@
 
 	if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["name"]) && !empty($_POST["address1"]) &&
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
-		!empty($_POST["interest"])) { //any missing information (only address2 excluded)
+		!empty($_POST["interest"])) {
+		echo 'something is broken';
 
 		if (!pg_query("select name from users where username = \'".$POST["username"]."\'")) { //username already exists
 			echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
@@ -31,12 +32,12 @@
 			//insert the information into the database!
 			
 			// for the different fields of an address, concatenate into a single string
-			if empty($_POST["address2"]) {
-				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
-			} else {
-				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["address2"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
-			}
-			echo $serializedaddress;
+			// if empty($_POST["address2"]) {
+			// 	$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
+			// } else {
+			// 	$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["address2"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
+			// }
+			// echo $serializedaddress;
 
 			//put all information into a string, then send to database
 			//$rowtoinsert = "\'".$_POST["username"]."\','".$_POST["password"]."\','".$_POST["name"]."\','".$address."\','"$_POST['interest']."\'";
