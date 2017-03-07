@@ -34,6 +34,6 @@
 
 	if(isset($_POST['submit'])){ //check if form was submitted
 		// $input = $_POST['inputText']; //get input text
-		echo "Success! You entered: ";//.$input;
+		echo "Success! You entered: ".$_POST['name'];//.$input;
 	}
  ?>
