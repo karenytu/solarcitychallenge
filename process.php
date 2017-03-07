@@ -12,8 +12,9 @@
 	echo 'test 2';
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
 	$numtables = pg_query($resource, "SELECT COUNT(DISTINCT `table_name`) FROM `information_schema`.`columns` WHERE `table_schema` =".$name.";");
-	echo $numtables;
-	echo '4';
+	echo "$numtables";
+	echo gettype($numtables);
+	echo 4;
 	if (!$result) {
 		echo 'table does not exist';
 		pg_query($resource, "CREATE TABLE users(NAME TEXT);");
