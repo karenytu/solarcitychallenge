@@ -11,9 +11,9 @@
 		<label>Name </label><input type="text" name="name"/>
 		<br>
 		<br>
-		<label>Address Line 1 </label><input type="text" name="address1"/> <!-- Street address, P.O. box, company name, c/o,   <div class="submissionfield">-->
+		<label>Address Line 1 </label><input type="text" name="address1"/> <!-- Street address, P.O. box, company name, c/o,   <div class="submissionfield"-->
 		<br>
-		<label>Address Line 2 </label><input type="text" name="address2"/> <!-- Apartment, suite, unit, building, floor, etc.,     <div class="submissionbutton"> -->
+		<label>Address Line 2 </label><input type="text" name="address2"/> <!-- Apartment, suite, unit, building, floor, etc.,     <div class="submissionbutton" -->
 		<br>
 		<label>City <label/><input type="text" name="city"/>
 		<br>
