@@ -16,7 +16,7 @@
 	echo 4;
 	if (!$result) {
 		echo 'table does not exist';
-		pg_query($resource, "CREATE TABLE users(NAME TEXT);");
+		$ resource pg_query($resource, "CREATE TABLE users(NAME TEXT);"); // goes here, but does not succesfully make a table
 	} else{
 		echo 'table exists!!!!!';
 	}
