@@ -42,6 +42,7 @@
 	    $connection = new Mongo($URI);
 	    $database   = $connection->selectDB('heroku_5kdpcthd');
 	    $collection = $database->selectCollection('Users');
+	    echo 'Hello World 2';
 	} catch(MongoConnectionException $e)
 	{
 	    die("Failed to connect to database ".$e->getMessage());
