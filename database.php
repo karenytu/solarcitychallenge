@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<?php
+			$resource =  pg_connect(getenv('DATABASE_URL'));
+			$table = pg_query($resource, "select * from users;");
+			
+			echo "<table>"; // start table in html
+			while($row = pg_fetch_array($table)) {
+				echo"<tr><td>".$row['username']."</td><td>".$row['password']."</td><td>".$row['name']."</td><td>".$row['age']."</td><td>".$row['address']."</td><td>".$row['interest']."</td></tr>";
+			}
+			echo "</table>"; // needed to close the table in html
+			pg_close();
+		?>
+	</body>
+</html>
