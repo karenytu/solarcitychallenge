@@ -8,7 +8,6 @@
  <?php
 	$resource =  pg_connect(getenv('DATABASE_URL'));
 	echo 'test';
-	$dbname = 
 	echo pg_dbname(resource);
 	echo 'test 2';
 	$numrows = pg_num_rows(resource, "select * from users"); //users is the name of a table
