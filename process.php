@@ -10,6 +10,8 @@
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
 	$table = pg_query($resource, "select * from users;");
 
+	$var_dump($POST["age"]);
+
 	if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($POST["age"]) && !empty($_POST["name"]) && !empty($_POST["address1"]) &&
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
 		!empty($_POST["interest"])) {
