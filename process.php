@@ -43,14 +43,14 @@
 
 			//put all information into a string, then send to database
 			// $rowtoinsert = "'";
-			$rowtoinsert = "'".$_POST["username"]."','".$_POST["password"]."','".$_POST["name"]."',".$POST_["age"].",'".$address."','"$_POST['interest']."'";
-			// echo $rowtoinsert;
-			$attempt = pg_query($resource, "insert into users values (".$rowtoinsert. ");");
-			if($attempt != null) {
-				echo 'success???';
-			} else {
-				echo 'did not insert';
-			}
+			$rowtoinsert = "'".$_POST["username"]."','".$_POST["password"]."','".$_POST["name"]."',".$POST_["age"].",'".$serializedaddress."','"$_POST['interest']."'";
+			echo $rowtoinsert;
+			// $attempt = pg_query($resource, "insert into users values (".$rowtoinsert. ");");
+			// if($attempt != null) {
+			// 	echo 'success???';
+			// } else {
+			// 	echo 'did not insert';
+			// }
 		}
 	} else {
 		echo"<html>
