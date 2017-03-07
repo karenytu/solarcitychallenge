@@ -13,27 +13,30 @@
 	if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["name"]) && !empty($_POST["address1"]) &&
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
 		!empty($_POST["interest"])) { //any missing information (only address2 excluded)
-		echo "<html>
-			<body>
-				<label>Everything entered as normally</label>
-			</body>
-		</html>";
-		//insert the information into the database!
-		//$rowtoinsert = $_POST["username"].$_POST["password"].$_POST["name"]
 
-		//put all information into a string, then send to database
-		// for the different fields of an address, serialize($value) to turn into a single string
-		
-		//$_POST["address1"]
-		//$_POST["address2"]
-	} else if (pg_query("select name from users where username = \'".$POST["username"]."\'")) { //username already exists
-		echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
-		echo "<html>
-			<body>
-				<label>username already exists</label>
-			</body>
-		</html>";
-		// include a button to go back to the other page??
+		if (pg_query("select name from users where username = \'".$POST["username"]."\'")) { //username already exists
+			echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
+			echo "<html>
+				<body>
+					<label>username already exists</label>
+				</body>
+			</html>";
+			// include a button to go back to the other page??
+		} else {
+			echo "<html>
+				<body>
+					<label>Everything entered as normally</label>
+				</body>
+			</html>";
+			//insert the information into the database!
+			//$rowtoinsert = $_POST["username"].$_POST["password"].$_POST["name"]
+
+			//put all information into a string, then send to database
+			// for the different fields of an address, serialize($value) to turn into a single string
+			
+			//$_POST["address1"]
+			//$_POST["address2"]
+		}
 	} else {
 		echo"<html>
 			<body>
