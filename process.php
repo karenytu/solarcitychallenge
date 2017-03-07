@@ -14,7 +14,7 @@
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
 		!empty($_POST["interest"])) { //any missing information (only address2 excluded)
 
-		if (pg_query("select name from users where username = \'".$POST["username"]."\'")) { //username already exists
+		if (!pg_query("select name from users where username = \'".$POST["username"]."\'")) { //username already exists
 			echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
 			echo "<html>
 				<body>
