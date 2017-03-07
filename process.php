@@ -20,7 +20,8 @@
 	} else{
 		echo 'table exists!!!!!';
 		$table = pg_query($resource, "SELECT * from users;");
-		echo pg_num_rows($table);
+		$row = pg_fetch_row($resource, 0);
+		var_dump(pg_num_rows($table));
 		// $numrows = pg_query($resource, "SELECT COUNT(*) FROM users;");
 		// echo $numrows;
 		//insert a row..
