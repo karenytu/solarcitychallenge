@@ -13,8 +13,14 @@
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
 	if (!$result) {
 		echo 'table does not exist';
+		pg_query($resource, "CREATE TABLE users(NAME TEXT)")
 	}
 	echo 'test 3';
+	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
+	if (!$result) {
+		echo 'table does not exist';
+	}
+	echo 'test 4';
 	// if(pg_query($resource, 'IF OBJECT_ID(\'users\') IS NULL') {
 	// 	pg_query($resource, 'CREATE TABLE users(NAME TEXT)');
 	// 	echo 'table created';
