@@ -2,7 +2,7 @@
 <html>
 	<body>
 
-	<form method="post">
+	<form action = "#", method="post">
 		<label>Name <label><input type="text" name="name">
 		<br>
 		<br>
