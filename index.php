@@ -1,8 +1,19 @@
+<?php    
+	require 'vendor/autoload.php';
+	$uri = "mongodb://<dbuser>:<dbpassword>@ds121190.mlab.com:21190/heroku_5kdpcthd";
+	$client = new MongoDB\Client($uri);
+
+	if(isset($_POST['submit'])){ //check if form was submitted
+		$input = $_POST['inputText']; //get input text
+		echo "Success! You entered: ".$input;
+	}    
+?>
+
 <!DOCTYPE html>
 <html>
 	<body>
 
-	<form action="process.php", method="post">
+	<form action="#", method="post">
 		<label>Name <label><input type="text" name="name">
 		<br>
 		<br>
@@ -20,7 +31,7 @@
 		<label>Why you are interested in solar: <label><input type="text" name="interest">
 			<!-- .submissionfield { width: 90px; height: 390px; border: 1px solid #999999; padding: 5px; } for this one-->
 		<br>
-		<input type="submit" value="Submit">
+		<input type="submit" name="submit">
 	</form>
 
 	</body>

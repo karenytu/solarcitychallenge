@@ -20,3 +20,9 @@
 		'country' => country,
 		'interest' => interest
 	);
+
+!DOCTYPE html>
+<html>
+	<body>
+	<label>TEST</label>
+	</body>
