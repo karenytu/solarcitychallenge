@@ -27,24 +27,28 @@
 </html>
 
 <?php  
-	require 'vendor/autoload.php';
-	$uri = 'mongodb://heroku_5kdpcthd:rggk6pekbv8ttf1f7g6ju7jp5u@ds121190.mlab.com:21190/heroku_5kdpcthd';
-	// $uri = getenv('MONGODB_URI');
-	echo 'Hello World 1';
-	// if(!empty($_POST)){ //check if form was submitted
-	// 	// $input = $_POST['inputText']; //get input text
-	// 	echo 'Hello World 2';
-	// 	echo "Success! You entered: ".$_POST['name'];//.$input;
-	// }
-	echo 'Hello World 2';
+	echo 'Test 1';
+	$dbopts = parse_url(getenv('DATABASE_URL'));
+		$app->register(new Herrera\Pdo\PdoServiceProvider(),
+		               array(
+		                   'pdo.dsn' => 'pgsql:dbname='.ltrim($dbopts["path"],'/').';host='.$dbopts["host"] . ';port=' . $dbopts["port"],
+		                   'pdo.username' => $dbopts["user"],
+		                   'pdo.password' => $dbopts["pass"]
+		               )
+		);
+	
+	$app->get('/db/', function() use($app) {
+	$st = $app['pdo']->prepare('SELECT name FROM test_table');
+	$st->execute();
 
-	try {
-	    $connection = new Mongo($uri);
-	    echo 'Hello World 3';
-	    $database   = $connection->selectDB('heroku_5kdpcthd');
-	    $collection = $database->selectCollection('Users');
-	} catch(MongoConnectionException $e) {
-		echo 'Hello World 4';
-	    die('Failed to connect to database '.$e->getMessage());
+	$names = array();
+	while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
+	   	$app['monolog']->addDebug('Row ' . $row['name']);
+	    $names[] = $row;
 	}
+
+	return $app['twig']->render('database.twig', array(
+	    'names' => $names
+	  ));
+	});
  ?>
