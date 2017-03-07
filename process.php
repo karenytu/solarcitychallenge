@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<body>
 	<label>TEST</label>
@@ -7,6 +7,7 @@
 
  <?php
 	$resource =  pg_connect(getenv('DATABASE_URL'));
+	echo $_POST["name"];
 	if(empty($POST)) {
 		echo 'empty';
 	} else {
