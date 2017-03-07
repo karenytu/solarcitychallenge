@@ -8,9 +8,12 @@
  <?php
 	$resource =  pg_connect(getenv('DATABASE_URL'));
 	echo 'test';
-	// echo pg_dbname(); //definitely returned some random string!
+	$name = pg_dbname(); //definitely returned some random string!
 	echo 'test 2';
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
+	$numtables = pg_query($resource, "SELECT COUNT(DISTINCT `table_name`) FROM `information_schema`.`columns` WHERE `table_schema` =".$name.";");
+	echo $numtables;
+	echo '4';
 	if (!$result) {
 		echo 'table does not exist';
 		pg_query($resource, "CREATE TABLE users(NAME TEXT);");
