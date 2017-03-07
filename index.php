@@ -31,6 +31,10 @@
 		<br>
 		<label>Address Line 2 </label><input type="text" name="address2"/> <!-- Apartment, suite, unit, building, floor, etc.,     <div class="submissionbutton"> -->
 		<br>
+		<div>
+			<label>Password </label>
+			<input type="text" name="password">
+		</div>
 		<label>City <label/><input type="text" name="city"/>
 		<br>
 		<label>State/Province/Region <label/><input type="text" name="region"/>	
