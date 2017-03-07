@@ -10,7 +10,11 @@
 	echo 'test';
 	// echo pg_dbname(); //definitely returned some random string!
 	echo 'test 2';
-	echo pg_query($resource, 'IF OBJECT_ID(\'users\') IS NULL');
+	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
+	if (!$result) {
+		echo 'table does not exist';
+	}
+	echo 'test 3';
 	// if(pg_query($resource, 'IF OBJECT_ID(\'users\') IS NULL') {
 	// 	pg_query($resource, 'CREATE TABLE users(NAME TEXT)');
 	// 	echo 'table created';
