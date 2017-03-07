@@ -11,19 +11,20 @@
 	$name = pg_dbname(); //definitely returned some random string!
 	echo 'test 2';
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
-	$numtables = pg_query($resource, "SELECT COUNT(DISTINCT `table_name`) FROM `information_schema`.`columns` WHERE `table_schema` =".$name.";");
+	$numtables = pg_query($resource, "select count(*) from information_schema.tables");
 	echo $numtables ? 'true' : 'false';
-	echo 4;
-	if (!$result) {
+	// echo 4;
+	if ($result) {
 		echo 'table does not exist';
-		$tablecreated = pg_query($resource, "CREATE TABLE users(NAME TEXT);"); // goes here, but does not succesfully make a table
+		$tablecreated = pg_query($resource, "CREATE TABLE users(NAME TEXT);"); // goes here, but does not succesfully make a table?
 		echo $tablecreated ? 'true' : 'false';
 	} else{
 		echo 'table exists!!!!!';
+		// number of rows in table???
 	}
 
 	$result2 = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
-	if (!result) {
+	if ($result2) {
 		echo 'table NOT created';
 	}
 	echo 'test 3';
