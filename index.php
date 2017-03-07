@@ -7,7 +7,6 @@
 		$input = $_POST['inputText']; //get input text
 		echo "Success! You entered: ".$input;
 	}    
-?>
 
 <!DOCTYPE html>
 <html>
