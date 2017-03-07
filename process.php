@@ -22,21 +22,26 @@
 				</body>
 			</html>";
 			// include a button to go back to the other page??
-		} else {
+		} else { // landing page: you have been added to the mailing list to get any additional information! in the meantime, check out solarcity's website
 			echo "<html>
 				<body>
 					<label>Everything entered as normally</label>
 				</body>
 			</html>";
 			//insert the information into the database!
-			//$rowtoinsert = $_POST["username"].$_POST["password"].$_POST["name"]
+			
+			// for the different fields of an address, concatenate into a single string
+			if empty($_POST["address2"]) {
+				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);
+			} else {
+				$serializedaddress = trim($_POST["address1"])."\n".trim($_POST["address2"])."\n".trim($_POST["city"])."\n".trim($_POST["region"])."\n".trim($_POST["country"]);			}
+			}
+			echo $serializedaddress;
 
 			//put all information into a string, then send to database
-			// for the different fields of an address, serialize($value) to turn into a single string
-			
-			//$_POST["address1"]
-			//$_POST["address2"]
-		}
+			//$rowtoinsert = "\'".$_POST["username"]."\','".$_POST["password"]."\','".$_POST["name"]."\','".$address."\','"$_POST['interest']."\'";
+			//echo $rowtoinsert;
+			//pg_query($resource, "insert into users values (".$rowtoinsert. ");");
 	} else {
 		echo"<html>
 			<body>
