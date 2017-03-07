@@ -2,11 +2,12 @@
 <html>
 	<body>
 
-	<form action = "process.php", method="post"> <!-- Write css layout for a form!!!-- >
+	<form action = "process.php" method="post"> <!-- Write css layout for a form!!!-- >
 		Username <input type="text" name="username"/>
-		<br>
-		<label>Password </label><input type="text" name="password"/>
-		<br>
+		<div>
+			<label>Password </label>
+			<input type="text" name="password">
+		</div>
 		<label>Name </label><input type="text" name="name"/>
 		<br>
 		<br>
@@ -21,7 +22,7 @@
 		<label>Country <label/><input type="text" name="country"/>
 		<br>
 		<br>
-		<label>Why you are interested in solarafafasfasd: <label/><input type="text" name="interest">
+		<label>Why you are interested in solar: <label/><input type="text" name="interest">
 			<!-- .submissionfield { width: 90px; height: 390px; border: 1px solid #999999; padding: 5px; } for this one-->
 		<br>
 		<input type="submit" name="submit">
