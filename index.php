@@ -39,7 +39,7 @@
 	echo 'Hello World 2';
 
 	try {
-	    $connection = new Mongo($URI);
+	    $connection = new Mongo($uri);
 	    echo 'Hello World 3';
 	    $database   = $connection->selectDB('heroku_5kdpcthd');
 	    $collection = $database->selectCollection('Users');
