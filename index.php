@@ -3,11 +3,11 @@
 	<body>
 
 	<form action = "process.php", method="post"> <!-- Write css layout for a form!!!-- >
-		<label>Username <label><input type="text" name="username">
+		<label>Username </label><input type="text" name="username">
 		<br>
-		<label>Password <label><input type="text" name="password">
+		<label>Password </label><input type="text" name="password">
 		<br>
-		<label>Name <label><input type="text" name="name">
+		<label>Name </label><input type="text" name="name">
 		<br>
 		<br>
 		<label>Address Line 1</label><input type="text" name="address1"> <!-- Street address, P.O. box, company name, c/o,   <div class="submissionfield">-->
