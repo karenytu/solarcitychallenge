@@ -8,6 +8,22 @@
 			<label>Password </label>
 			<input type="text" name="password">
 		</div>
+		<div>
+			<label>Password </label>
+			<input type="text" name="password">
+		</div>
+		<div>
+			<label>Password </label>
+			<input type="text" name="password">
+		</div>
+		<div>
+			<label>Password </label>
+			<input type="text" name="password">
+		</div>
+		<div>
+			<label>Password </label>
+			<input type="text" name="password">
+		</div>
 		<label>Name </label><input type="text" name="name"/>
 		<br>
 		<br>
