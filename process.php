@@ -17,7 +17,7 @@
 			require_once("usernameexists.html");
 		} else {
 			// landing page: you have been added to the mailing list to get any additional information! in the meantime, check out solarcity's website
-			require_once("success.html");
+			require_once("successful.html");
 			// echo "<html>
 			// 	<body>
 			// 		<label>Everything entered as normally</label>
@@ -44,8 +44,8 @@
 			// }
 		}
 	} else {
+		require_once("incompleteinfo.html");
 		echo 'incomplete';
-		require_once("incompleteinformation.html");
 	}
 
 ?>
