@@ -11,7 +11,6 @@
 
 		if (!pg_query("if exists (select name from users where username = '".trim($POST["username"])."') then null")) { //username already exists
 			//require_once(usernameexists.html);
-			echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
 			echo "<html>
 				<body>
 					<label>username already exists</label>
