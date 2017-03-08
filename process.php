@@ -44,6 +44,7 @@
 			// }
 		}
 	} else {
+		echo 'incomplete';
 		require_once(incompleteinformation.html);
 	}
 
