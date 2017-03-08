@@ -4,10 +4,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 	<div class = "header">
-		<div>
-			<img class = "header_image" src = "images/solarcitylogo.png">
-			<h1>Interest Form</h1>
-		</div>
+		<img class = "header_image" src = "images/solarcitylogo.png">
+		<h1>Interest Form</h1>
 	</div>
 
 	<body>
