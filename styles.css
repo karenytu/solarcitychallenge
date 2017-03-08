@@ -1,5 +1,11 @@
-body, html {
+html {
+	margin: 0;
 	height: 100%;
+	width: 100%;
+}
+
+body {
+	min-height: 100%;
 	margin: 0;
 }
 
