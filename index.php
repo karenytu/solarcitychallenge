@@ -5,7 +5,7 @@
 </head>
 	<div id = "header">
 		<div>
-			<img src = "images/solarcitylogo.png">
+			<img id = "header_image" src = "images/solarcitylogo.png">
 			<h1>Interest Form</h1>
 		</div>
 	</div>
