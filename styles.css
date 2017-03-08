@@ -21,7 +21,7 @@ body {
 	margin: 0;
 	/*padding-bottom:15%;*/
 	background-color: #FFFFFF;
-	z-index:0;
+	z-index:-1;
 }
 
 .header_image {
@@ -30,7 +30,7 @@ body {
 	top:0;
 	height:60px;
 	width:auto;
-	z-index: -1;
+	z-index: 0;
 }
 
 h1 {
