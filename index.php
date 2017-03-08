@@ -3,11 +3,15 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
-		<div class = "header">
-				<a href="solarcity.com">
-					<img class = "header_image" src = "images/solarcitylogo.png"/>
-				</a>
-				<h1>Interest Form</h1>
+		<div>
+			<center>
+				<table border="0" cellpadding="15">
+					<tr>
+						<td><a href="http://www.solarcity.com/" target="_self"><img src="images/solarcitylogo" class = "header_image"></img></a></td>
+					 	<td class = "header_text">Interest Form</td>
+					 </tr>
+				 </table>
+			</center>
 		</div>
 
 		<body>

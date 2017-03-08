@@ -25,12 +25,8 @@ body {
 }
 
 .header_image {
-	position: absolute;
-	left:0;
-	top:0;
 	height:60px;
 	width:auto;
-	z-index: 0;
 }
 
 h1 {
