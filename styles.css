@@ -1,15 +1,16 @@
 body {
 	background-image:url("images/index_background.jpg");
+	background-size: cover;
 }
 
 .header {
-	height: 50px;
+	height: 25%;
 	padding-bottom:15%;
 	background-color: #FFFFFF;
 }
 
 .header_image {
-	height:50px;
+	height:100%;
 }
 
 h1 {
