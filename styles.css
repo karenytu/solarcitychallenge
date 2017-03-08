@@ -1,6 +1,6 @@
 body {
 	background-image:url("images/index_background.jpg");
-	background-size: cover;
+	background-size: contain;
 }
 
 .header {
@@ -9,7 +9,7 @@ body {
 	background-color: #FFFFFF;
 }
 
-header_image {
+.header_image {
 	height:100%;
 	width:auto;
 	background-image:url("images/solarcitylogo.png");

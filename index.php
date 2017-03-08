@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 	<div class = "header">
-		<img id = "header_image">
+		<img class = "header_image">
 		<h1>Interest Form</h1>
 	</div>
 
