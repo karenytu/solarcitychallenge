@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 	<body>
 
 	<form action = "process.php" method="post"> <!-- Write css layout for a form-->
