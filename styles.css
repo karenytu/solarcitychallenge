@@ -17,17 +17,21 @@ body {
 }
 
 .header {
+	position:absolute;
 	height: 25%;
 	margin: 0;
 	/*padding-bottom:15%;*/
 	background-color: #FFFFFF;
+	z-index:0;
 }
 
 .header_image {
-	float: left;
-	margin-left: 70px;
+	position: absolute;
+	left:0;
+	top:0;
 	height:60px;
 	width:auto;
+	z-index: -1;
 }
 
 h1 {
