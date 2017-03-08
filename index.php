@@ -3,7 +3,6 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
-	<div class = "bg">
 		<div class = "header">
 			<img class = "header_image" source = "images/solarcitylogo.png">
 			<h1>Interest Form</h1>
@@ -37,5 +36,4 @@
 				<input type="submit" name="submit">
 			</form>
 		</body>
-	</div>
 </html>
