@@ -3,9 +3,9 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
-	<div id = "header">
+	<div class = "header">
 		<div>
-			<img id = "header_image" src = "images/solarcitylogo.png">
+			<img class = "header_image" src = "images/solarcitylogo.png">
 			<h1>Interest Form</h1>
 		</div>
 	</div>
