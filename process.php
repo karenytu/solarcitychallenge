@@ -14,10 +14,10 @@
 		!empty($_POST["interest"])) {
 
 		if (!pg_query("if exists (select name from users where username = '".trim($POST["username"])."') then null")) { //username already exists
-			require_once(usernameexists.html);
+			require_once("usernameexists.html");
 		} else {
 			// landing page: you have been added to the mailing list to get any additional information! in the meantime, check out solarcity's website
-			require_once(success.html);
+			require_once("success.html");
 			// echo "<html>
 			// 	<body>
 			// 		<label>Everything entered as normally</label>
@@ -45,7 +45,7 @@
 		}
 	} else {
 		echo 'incomplete';
-		require_once(incompleteinformation.html);
+		require_once("incompleteinformation.html");
 	}
 
 ?>
