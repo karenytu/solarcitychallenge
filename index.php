@@ -38,7 +38,7 @@
 				<br>
 				<label>Why you are interested in solar: <label/><input type="text" name="interest">
 				<br>
-				<input type="submit" name="submit">
+				<input type="submit" name="submit" class = "submitform">
 			</form>
 		</body>
 </html>
