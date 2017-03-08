@@ -16,16 +16,6 @@ body {
 	background-attachment: fixed;
 }
 
-.bg{
-	background-image:url("images/index_background.jpg");
-
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-
-}
-
 .header {
 	height: 25%;
 	/*padding-bottom:15%;*/
