@@ -3,6 +3,10 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
+	<header>
+		<h1>Interest Form</h1>
+	</header>
+
 	<body>
 
 	<form action = "process.php" method="post"> <!-- Write css layout for a form-->
