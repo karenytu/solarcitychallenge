@@ -3,18 +3,18 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
-		<div>
-			<center>
-				<table border="0" cellpadding="15">
+		<body>
+			<div>
+				<center>
+				<table width = "100%" border="0" height = "60px" style = "background-color:rgba(0,0,0, 0.3)">
 					<tr>
-						<td><a href="http://www.solarcity.com/" target="_self"><img src="images/solarcitylogo" class = "header_image"></img></a></td>
-					 	<td class = "header_text">Interest Form</td>
+						<th width = "15%" align = "right"><a href="http://www.solarcity.com/" target="_self"><img src="images/solarcitylogo.png" class = "header_image"></img></a></th>
+					 	<th width = "18"%><th>
+					 	<th width = "67%" align = "left" class = "header_text">INTEREST FORM</th>
 					 </tr>
 				 </table>
-			</center>
-		</div>
-
-		<body>
+				</center>
+			</div>
 			<form action = "process.php" method="post"> <!-- Write css layout for a form-->
 				<label>Username </label><input type="text" name="username"/>
 				<br>
