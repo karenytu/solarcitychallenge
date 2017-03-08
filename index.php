@@ -31,8 +31,3 @@
 
 	</body>
 </html>
-
-<!--?php  
-	$resource =  pg_connect(getenv('DATABASE_URL'));
-	REMOVED ANGLE BRACKETS>..this section of code is probably not
- ? -->
