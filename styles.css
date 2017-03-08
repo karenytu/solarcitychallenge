@@ -23,6 +23,7 @@ body {
 }
 
 .header_image {
+	float: left;
 	height:50px;
 	width:auto;
 }
