@@ -7,7 +7,7 @@
 		<body>
 			<div class = "header">
 				<a href="solarcity.com">
-					<img class = "header_image" src = "images/solarcitylogo.png">
+					<img class = "header_image" src = "images/solarcitylogo.png"/>
 				</a>
 				<h1>Interest Form</h1>
 			</div>

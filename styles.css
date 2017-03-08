@@ -23,10 +23,11 @@ body {
 }
 
 .header_image {
-	height:25%;
+	height:50px;
 	width:auto;
 }
 
 h1 {
+	position: relative;
 	color: #000000;
 }
