@@ -7,11 +7,11 @@
 		<body>
 			<div class = "header">
 				<a href="solarcity.com">
-					<img class = "header_image" source = "images/solarcitylogo.png">
+					<img class = "header_image" src = "images/solarcitylogo.png">
 				</a>
 				<h1>Interest Form</h1>
 			</div>
-			
+
 			<form action = "process.php" method="post"> <!-- Write css layout for a form-->
 				<label>Username </label><input type="text" name="username"/>
 				<br>
