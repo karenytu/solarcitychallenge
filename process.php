@@ -9,7 +9,7 @@
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
 		!empty($_POST["interest"])) {
 
-		if (pg_query("if exists (select name from users where username = '".trim($POST["username"])."') then null")) { //username already exists
+		if (!pg_query("if exists (select name from users where username = '".trim($POST["username"])."') then null")) { //username already exists
 			//require_once(usernameexists.html);
 			echo 'username already exists, go back and choose a different one'; // make this into an html pop up or something
 			echo "<html>
