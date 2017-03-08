@@ -3,19 +3,12 @@
 	$result = pg_query($resource, "IF OBJECT_ID('users') IS NULL");
 	$table = pg_query($resource, "select * from users;");
 
-	//$var_dump($_POST["age"]);
-
 	if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["age"]) && !empty($_POST["name"]) && !empty($_POST["address1"]) &&
 		!empty($_POST["city"]) && !empty($_POST["region"]) && !empty($_POST["country"]) &&
 		!empty($_POST["interest"])) {
 
 		if (!pg_query("if exists (select name from users where username = '".trim($POST["username"])."') then null")) { //username already exists
-			//require_once(usernameexists.html);
-			echo "<html>
-				<body>
-					<label>username already exists</label>
-				</body>
-			</html>";
+			require_once(usernameexists.html);
 		} else {
 			// landing page: you have been added to the mailing list to get any additional information! in the meantime, check out solarcity's website
 			//require_once(success.html);
@@ -45,12 +38,7 @@
 			// }
 		}
 	} else {
-		//require_once(incompleteinformation.html);
-		echo"<html>
-			<body>
-				<label>Missing information.</label>
-			</body>
-		</html>";
+		require_once(incompleteinformation.html);
 	}
 
 ?>

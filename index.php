@@ -15,7 +15,7 @@
 				 </table>
 				</center>
 			</div>
-			<form action = "process.php" method="post"> <!-- Write css layout for a form-->
+			<form action = "process.php" method="post">
 				<label>Username </label><input type="text" name="username"/>
 				<br>
 				<label>Password </label><input type="password" name="password"/>
@@ -37,7 +37,6 @@
 				<br>
 				<br>
 				<label>Why you are interested in solar: <label/><input type="text" name="interest">
-					<!-- .submissionfield { width: 90px; height: 390px; border: 1px solid #999999; padding: 5px; } for this one-->
 				<br>
 				<input type="submit" name="submit">
 			</form>
